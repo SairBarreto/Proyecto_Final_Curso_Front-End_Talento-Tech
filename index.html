@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda SAIRCORP</title>
+    <!--Incono de Pagina-->
+    <link rel="icon" href="Imagenes/Icons/SAIRCORP.ico">
+    <!--Font Family-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!--Font Awesone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Mis estilos-->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="Imagenes/SAIRCORP.png" alt="Logo de SAIRCORP">
+            <h1>SAIRCORP</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+                <li><a href="#productos"><i class="fa-solid fa-bag-shopping"></i> <span>Productos</span></a></li>
+                <li><a href="#resenas"><i class="fa-solid fa-magnifying-glass"></i> <span>Reseñas</span></a></li>
+                <li><a href="Contacto.html"><i class="fa-solid fa-address-card"></i> <span>Contacto</span></a></li>
+                <li>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i> <span>Carrito</span></a>
+                    <!--<div class="contador-de-productos">
+                        <span id="contador-productos">0</span>
+                    </div>-->
+                    
+                    <div class="contenedor-productos-card ocultar-card">
+                        <div class="card-producto">
+                            <div class="informacion-producto-card">
+                                <div class="cantidad-producto-carrito">1</div>
+                                <p class="titulo-producto-carrito">Auriculares Negro</p>
+                                <span class="precio-producto-carrito">100 $</span>
+                            </div>
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="card-total-carrito">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$ 100</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Inicio -->
+        <section id="inicio">
+            <h2>Bienvenido a SAIRCORP</h2>
+            <p>Tu destino para lo último en tecnología. Explora nuestra selección de auriculares, teclados, procesadores y mucho más. 
+            Confía en las reseñas de nuestros clientes y elige lo mejor en electrónica.</p>
+        </section>
+
+        <!-- Productos -->
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_001.jpg" alt="Auriculares Negro">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Auriculares Negro</h2>
+                        <p class="precio">100 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_002.jpg" alt="Auriculares Blanco">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Auriculares Blanco</h2>
+                        <p class="precio">80 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_003.jpg" alt="Auriculares Gris">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Auriculares Gris</h2>
+                        <p class="precio">80 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_004.jpg" alt="Auriculares Pro">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Auriculares Pro</h2>
+                        <p class="precio">120 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_Bluetooth_001.jpg" alt="Auriculares_Bluetooth_001.jpg">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Airpods</h2>
+                        <p class="precio">130 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Auriculares_Bluetooth_002.jpg" alt="Auriculares Bluetooth">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Auriculares Bluetooth</h2>
+                        <p class="precio">150 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Raton_002.jpg" alt="Mouse Genius">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Mouse Genius</h2>
+                        <p class="precio">100 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Ryzen 9.jpg" alt="Ryzen 9">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Ryzen 9</h2>
+                        <p class="precio">500 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="producto-card">
+                    <figure>
+                        <img src="Imagenes/Productos/Teclado_003.png" alt="Teclado Trigger">
+                    </figure>
+                    <div class="informacion-producto">
+                        <h2>Teclado Trigger</h2>
+                        <p class="precio">50 $</p>
+                        <button>Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reseñas -->
+        <section id="resenas">
+            <h2>Reseñas</h2>
+            <div class="resenas-grid">
+                <div class="resena-card">
+                    <p>"Compré un procesador y unos auriculares, y superaron mis expectativas. Buen rendimiento y sonido. ¡Recomendado!"</p>
+                    <p>— <strong>Gonzalo</strong></p>
+                </div>
+                <div class="resena-card">
+                    <p>"El teclado mecánico y el mouse ergonómico que compré aquí son de primera calidad. Muy cómodos para largas jornadas."</p>
+                    <p>— <strong>Lucía</strong></p>
+                </div>
+                <div class="resena-card">
+                    <p>"Los auriculares que compré en esta tienda tienen una calidad de sonido espectacular. Atención al cliente impecable."</p>
+                    <p>— <strong>Carlos</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><i class="fa-solid fa-address-card"></i> <a href="Contacto.html">Enviar mensaje a Soporte</a></p>
+        <p>&copy; 2024 Mi Proyecto Web</p>
+    </footer>
+</body>
+</html>

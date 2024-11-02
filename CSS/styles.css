@@ -1,0 +1,368 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #F5F5F5;
+    color: #000000;
+    display: flex; /*Par que siempre quede abajo el Footer*/
+    flex-direction: column;
+    min-height: 100vh; /*Aca le decimos que como minimo tiene que medir lo que mide el viewport*/
+}
+
+/* Header */
+header {
+    background-color: #002B4E;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacia los elementos de los extremos */
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el título */
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: left; /* Alineación a la izquierda */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 20px;
+    gap: 15px;
+    padding: 0;
+    margin: 5px 0 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #3ABEFF;
+}
+
+/* Carrito de Compra*/
+
+.fa-solid {
+    font-size: 30px;
+}
+
+.fa-cart-shopping {
+    position: relative;
+}
+/*
+.contador-de-productos {
+    position: absolute;
+    top: 4%;
+    right: 6%;
+
+    background-color: #002B4E;
+    color: white;
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos {
+    font-size: 12px;
+}
+*/
+
+.contenedor-productos-card {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    
+    background-color: #002B4E;
+    width: 400px;
+    z-index: 1; /*Para que este adelante*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.card-producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.informacion-producto-card {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8; /*Para que el espacio sea mas grande*/
+}
+
+.titulo-producto-carrito {
+    font-size: 20px;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.fa-xmark {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; 
+}
+
+.fa-xmark:hover {
+    color: #3ABEFF;
+    cursor: pointer;
+}
+
+.card-total-carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+
+.card-total-carrito h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.ocultar-card {
+    display: none;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+}
+
+#productos, #resenas, #contacto {
+    margin-top: 20px;
+}
+
+/* Productos y Reseñas */
+.productos-grid, .resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto-card, .resena-card {
+    color: #002B4E;
+    border-radius: 10px;
+}
+
+.producto-card:hover, .resena-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.producto-card figure {
+    overflow: hidden;
+}
+
+.producto-card:hover img {
+    transform: scale(1.2);
+}
+
+.informacion-producto {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.informacion-producto button {
+    border: none;
+    background: none;
+    background-color: #002B4E;
+    color: white;
+    font-weight: bold;
+    padding: 15px 10px;
+    cursor: pointer;
+    bottom: 10px;
+}
+
+.informacion-producto button:hover {
+    background-color: #3ABEFF;
+    color: #002B4E;
+}
+
+/* Contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 2px; /* Reduce el espacio debajo del label */
+    font-weight: bold;
+}
+
+form input, form textarea {
+    font-size: 15px; /* Ajusta el tamaño de fuente */
+    margin-bottom: 10px;
+    padding: 8px; /* Añade un poco de espacio interno */
+}
+
+form button {
+    padding: 8px;
+    border: none;
+    background: none;
+    background-color: #002B4E;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3ABEFF;
+    color: #002B4E;
+}
+
+/* Footer */
+footer {
+    background-color: #002B4E;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto; /*Par que siempre quede abajo el Footer*/
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3ABEFF;
+}
+
+/* Media Queries */
+
+/* Para dispositivos móviles (hasta 600px) */
+@media (max-width: 600px) {
+    header img {
+        width: 60px;
+        height: 60px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        font-size: 16px;
+        gap: 10px;
+    }
+
+    /* Oculta el texto en los enlaces de navegación */
+    nav a {
+        display: flex;
+        align-items: center;
+    }
+
+    nav a i {
+        font-size: 24px;
+    }
+
+    nav a span {
+        display: none; /* Oculta el texto */
+    }
+
+    .productos-grid, .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-productos-card {
+        width: 100%;
+    }
+}
+
+/* Para tabletas (entre 600px y 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        font-size: 18px;
+        gap: 12px;
+    }
+
+    nav a span {
+        display: none; /* Oculta el texto */
+    }
+
+    .productos-grid, .resenas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Para pantallas grandes (a partir de 1024px) */
+@media (min-width: 1024px) {
+    .productos-grid, .resenas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor-productos-card {
+        width: 400px;
+    }
+}
