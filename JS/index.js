@@ -38,8 +38,23 @@ productosLista.addEventListener('click', e => {
       precio: producto.querySelector('p').textContent,
     }
 
-    // El ... lo que hace es que si la lista ya tiene elementos este se añade al final
+    const existeProducto = todosLosProductos.some(product => product.titulo === infoProducto.titulo)
+
+    if(existeProducto){
+       const productos = todosLosProductos.map(product => {
+        if(product.titulo === infoProducto.titulo){
+          product.cantidad++;
+          return product
+        }
+        else{return product}
+       })
+
+       todosLosProductos = [...productos]
+    }
+    else{
+      // El ... lo que hace es que si la lista ya tiene elementos este se añade al final
     todosLosProductos = [...todosLosProductos, infoProducto];
+    }
     
     mostrarEnHTML();
   }
