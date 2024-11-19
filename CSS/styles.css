@@ -108,6 +108,7 @@ nav a:hover {
     justify-content: space-between;
     padding: 30px;
     border-bottom: 1px solid rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255);
 }
 
 .informacion-producto-card {
@@ -327,6 +328,20 @@ footer a:hover {
 
     .contenedor-productos-card {
         width: 100%;
+    }
+
+    .card-producto {
+        padding: 20px 10px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .titulo-producto-carrito,
+    .precio-producto-carrito,
+    .cantidad-producto-carrito,
+    .total-pagar,
+    .card-total-carrito {
+        font-size: 18px;
     }
 }
 
