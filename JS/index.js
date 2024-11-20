@@ -1,12 +1,12 @@
 //Configacion del boton Carrito para que oculte y muestre los productos seleccionados
 
-const btnCarrito = document.querySelector('.contenedor-productos-para-comprar')
-const contenedorProductosSeleccionados = document.querySelector('.contenedor-productos-card')
+const btnCarrito = document.querySelector('.contenedor-productos-para-comprar');
+const contenedorProductosSeleccionados = document.querySelector('.contenedor-productos-card');
 
 btnCarrito.addEventListener('click', (event) => {
     event.preventDefault(); // Evita que el enlace recargue la página (Ya lo solucione poniendo un # en el href)
-    contenedorProductosSeleccionados.classList.toggle('ocultar-card')
-})
+    contenedorProductosSeleccionados.classList.toggle('ocultar-card');
+});
 /* Otra version de lo anterior
 document.getElementById("toggleCarrito").addEventListener("click", function(event) {
     event.preventDefault(); // Evita que la página recargue
@@ -18,53 +18,69 @@ document.getElementById("toggleCarrito").addEventListener("click", function(even
 */
   
 //Configuracion para que se agregen los productos al carrito
-const cardInfo = document.querySelector('.card-producto')
-const filaProducto = document.querySelector('.fila-productos')
+const cardInfo = document.querySelector('.card-producto');
+const filaProducto = document.querySelector('.fila-productos');
 
 //Lista de todos los contenedores de los productos
-const productosLista = document.querySelector('#productos')
+const productosLista = document.querySelector('#productos');
 
 //Variable de arreglos de Productos
-let todosLosProductos = []
+let todosLosProductos = [];
+const totalProductosPagar = document.querySelector('.total-pagar');
 
 productosLista.addEventListener('click', e => {
   
   if(e.target.classList.contains('btn-anadir-card')){
-    const producto = e.target.parentElement
+    const producto = e.target.parentElement;
 
     const infoProducto = {
       cantidad: 1,
       titulo: producto.querySelector('h2').textContent,
       precio: producto.querySelector('p').textContent,
-    }
+    };
 
-    const existeProducto = todosLosProductos.some(product => product.titulo === infoProducto.titulo)
+    const existeProducto = todosLosProductos.some(product => product.titulo === infoProducto.titulo);
 
     if(existeProducto){
        const productos = todosLosProductos.map(product => {
         if(product.titulo === infoProducto.titulo){
           product.cantidad++;
-          return product
+          return product;
         }
-        else{return product}
+        else{return product;}
        })
 
-       todosLosProductos = [...productos]
+       todosLosProductos = [...productos];
     }
     else{
       // El ... lo que hace es que si la lista ya tiene elementos este se añade al final
-    todosLosProductos = [...todosLosProductos, infoProducto];
+      todosLosProductos = [...todosLosProductos, infoProducto];
     }
     
     mostrarEnHTML();
   }
-})
+});
+
+//Funcion para eliminar un producto del carrito
+filaProducto.addEventListener('click', (e) =>{
+
+  if(e.target.classList.contains('fa-xmark')){
+    const producto = e.target.parentElement;
+    const titulo = producto.querySelector('p').textContent;
+
+    todosLosProductos = todosLosProductos.filter(product => product.titulo !== titulo);
+
+    mostrarEnHTML();
+  }
+});
 
 //Funcion para mostrar en el HTML
 const mostrarEnHTML = () => {
   
   //Limpio el HTML para que no se agregen duplicados
   filaProducto.innerHTML = '';
+
+  let totalPagar = 0;
 
   todosLosProductos.forEach(producto => {
     const contenedorProducto = document.createElement('div');
@@ -80,5 +96,10 @@ const mostrarEnHTML = () => {
     `;
 
     filaProducto.append(contenedorProducto);
+
+    totalPagar = totalPagar + parseInt(producto.cantidad * producto.precio.slice(1)); //Con el slice me aseguro que empiece de la posicion 1 para que no tome el signo $ y de error el parseInt()
+    
   });
+
+  totalProductosPagar.innerText = `$${totalPagar}`;
 };
