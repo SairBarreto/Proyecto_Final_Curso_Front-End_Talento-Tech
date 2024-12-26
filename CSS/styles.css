@@ -140,6 +140,21 @@ nav a:hover {
     font-weight: 700;
 }
 
+.card-total-carrito .btn-pagar{
+    font-size: 25px;
+    padding: 8px;
+    border: none;
+    background: none;
+    background-color: #002B4E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-total-carrito .btn-pagar:hover{
+    color: #3ABEFF;
+}
+
 .total-pagar {
     font-size: 20px;
     font-weight: 900;
