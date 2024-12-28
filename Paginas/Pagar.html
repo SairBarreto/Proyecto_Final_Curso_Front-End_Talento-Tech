@@ -23,8 +23,8 @@
         <nav>
             <ul>
                 <li><a href="../index.html"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
-                <li><a href="#productos"><i class="fa-solid fa-bag-shopping"></i> <span>Productos</span></a></li>
-                <li><a href="#resenas"><i class="fa-solid fa-magnifying-glass"></i> <span>Reseñas</span></a></li>
+                <li><a href="../index.html#productos"><i class="fa-solid fa-bag-shopping"></i> <span>Productos</span></a></li>
+                <li><a href="../index.html#resenas"><i class="fa-solid fa-magnifying-glass"></i> <span>Reseñas</span></a></li>
                 <li><a href="Contacto.html"><i class="fa-solid fa-address-card"></i> <span>Contacto</span></a></li>
                 <li>
                     <a href="#" id="toggleCarrito" class="contenedor-productos-para-comprar"><i class="fa-solid fa-cart-shopping"></i> <span>Carrito</span></a>
@@ -49,16 +49,18 @@
     <!-- Main -->
     <main>
         <div class="mostrar-productos-de-carrito">
-
+            <h2>Productos en el Carrito</h2>
             <div class="mostrar-fila-productos">
-                <!--Aca se iran agregando los productos dinamicamente con la siguiente estructura div-->
+                <!--Aca se añaden los productos que hay en el carrito-->
             </div>
         </div>
 
         <div class="mostrar-total">
-            <h3>Total:</h3>
-            <span class="mostrar-total-pagar">$0</span>
-            <button class="btn-pagar">Pagar</button>
+            <div class="precio">
+                <p>Total:</p>
+                <span class="mostrar-total-pagar">$0</span>
+            </div>
+            <button class="btn-pagar-total">Pagar</button>
         </div>
     </main>
 
