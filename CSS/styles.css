@@ -442,7 +442,7 @@ footer a:hover {
     }
 }
 
-/* Para tabletas (entre 600px y 1024px) */
+/* Para tabletas (entre 601px y 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     header img {
         width: 70px;
@@ -464,6 +464,15 @@ footer a:hover {
 
     .productos-grid, .resenas-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .producto-detalle img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .producto-detalle p {
+        font-size: 15px;
     }
 }
 
